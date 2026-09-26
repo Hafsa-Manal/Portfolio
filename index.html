@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hafsa Manal | Computer Science Student</title>
+  <meta name="description" content="Portfolio of Hafsa Manal, a B.E. Computer Science student at Stanley College of Engineering and Technology for Women, Hyderabad. Machine learning, security and web projects.">
+  <meta name="theme-color" content="#0a192f">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Apply the saved theme before the page paints -->
+  <script>
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('data-bs-theme', saved);
+      }
+    } catch (e) { /* storage unavailable, keep default */ }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav class="navbar navbar-expand-md sticky-top site-nav" aria-label="Main">
+      <div class="container-xl">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+                   <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience-title">Experience</a></li>
+        
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#recognition-title">More</a></li>
+            <li class="nav-item"><a class="nav-link" href="#hobbies">Creative</a></li>
+          </ul>
+
+          <ul class="navbar-nav icon-links">
+            <li class="nav-item">
+              <a class="icon-link has-tip" href="mailto:lanamhafsa@gmail.com" data-tip="lanamhafsa@gmail.com" aria-label="Email lanamhafsa@gmail.com">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="icon-link has-tip" href="https://github.com/Hafsa-Manal" target="_blank" rel="noopener noreferrer" data-tip="GitHub" aria-label="GitHub profile">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="icon-link has-tip" href="https://www.linkedin.com/in/hafsa-manal-a74980291" target="_blank" rel="noopener noreferrer" data-tip="LinkedIn" aria-label="LinkedIn profile">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <!-- TODO: replace # with the blog link -->
+              <a class="icon-link has-tip" href="#" id="blogLink" data-tip="Blog (link coming soon)" aria-label="Blog">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="icon-link" id="themeToggle" aria-label="Switch to light theme" aria-pressed="false">
+                <svg class="icon-sun" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HOME -->
+        <section id="home" class="section hero" aria-labelledby="hero-title">
+      <div class="container-xl">
+        <div class="row align-items-start g-5">
+          <div class="col-lg-6 order-lg-2">
+            <figure class="portrait portrait-hero">
+              <img src="assets/images/hafsa-portrait.jpg" width="783" height="979" alt="Hafsa Manal wearing a blue checked blazer and a black hijab, standing in front of a dark marble wall" onerror="this.onerror=null;this.src='assets/images/hafsa-portrait.jpeg';">
+            </figure>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h1 id="hero-title" class="hero-title">
+              <span class="hero-greeting">Hello, I'm</span><br>
+              <span id="typeText" data-text="Hafsa Manal"></span><span class="type-cursor" aria-hidden="true"></span>
+            </h1>
+            <p class="hero-role">B.E. Computer Science and Engineering student</p>
+            <p class="hero-text">
+             Computer Science Engineering student passionate about cybersecurity, research, and technology, with hands-on experience building practical projects and exploring innovative solutions.
+            </p>
+            <div class="hero-buttons">
+              <a class="btn btn-outline-accent" href="#contact">Contact me</a>
+              <a class="btn btn-outline-accent" href="assets/docs/hafsa-resume.pdf" download>Download resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (profile text, skills, experience, recognition, certifications) -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container-xl">
+        <h2 id="about-title" class="section-title"># About</h2>
+
+               <div class="row align-items-center g-5">
+          <div class="col-lg-8">
+            <p>
+              I am currently a Final-Year Computer Science Engineering student at <strong>Stanley College of Engineering and Technology for Women</strong>, where I explore cybersecurity, research, and software development. I enjoy turning ideas into practical projects and continuously learning new technologies.
+            </p>
+            <p>Technical skills:</p>
+            <ul class="tech-grid">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>HTML and CSS</li>
+              <li>React</li>
+              <li>MySQL and DBMS concepts</li>
+              <li>GitHub</li>
+            </ul>
+            
+          </div>
+          <div class="col-lg-4">
+            <canvas id="sphere" class="sphere-canvas" width="600" height="600" aria-hidden="true"></canvas>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <h2 id="experience-title" class="section-title"># Experience</h2>
+        <div class="info-box experience">
+          <div class="exp-tabs" role="tablist" aria-orientation="vertical" aria-labelledby="experience-title">
+            <button type="button" class="exp-tab" role="tab" id="tab-cyfy" aria-controls="panel-cyfy" aria-selected="true">CYFY Solutions</button>
+            <button type="button" class="exp-tab" role="tab" id="tab-stanley" aria-controls="panel-stanley" aria-selected="false" tabindex="-1">Stanley College</button>
+            <button type="button" class="exp-tab" role="tab" id="tab-usa" aria-controls="panel-usa" aria-selected="false" tabindex="-1">University of South Alabama</button>
+            <span class="exp-indicator" aria-hidden="true"></span>
+          </div>
+
+          <div class="exp-panels">
+            <div class="exp-panel" role="tabpanel" id="panel-cyfy" aria-labelledby="tab-cyfy" tabindex="0">
+              <h4>Intern @ <span class="accent">CYFY Solutions</span></h4>
+              <p class="exp-meta">May 2026 - June 2026, Hyderabad, India</p>
+              <ul class="arrow-list">
+                <li>Developed a Secure GRC Automation Platform aligned with security frameworks.</li>
+                <li>Performed application security testing and SaaS API integration.</li>
+                <li>Improved code quality and compliance framework enablement.</li>
+              </ul>
+            </div>
+
+            <div class="exp-panel" role="tabpanel" id="panel-stanley" aria-labelledby="tab-stanley" tabindex="0" hidden>
+              <h4>Summer Intern @ <span class="accent">Stanley College</span></h4>
+              <p class="exp-meta">May 2025 - June 2025, Hyderabad, India</p>
+              <ul class="arrow-list">
+                <li>Built a cyberbullying detection model using Python and machine learning algorithms.</li>
+              </ul>
+            </div>
+
+            <div class="exp-panel" role="tabpanel" id="panel-usa" aria-labelledby="tab-usa" tabindex="0" hidden>
+              <h4>Research Intern @ <span class="accent">University of South Alabama</span></h4>
+              <p class="exp-meta">April 2025 - September 2025, USA</p>
+              <ul class="arrow-list">
+                <li>Authored two research papers:</li>
+                <li>"The Green Potential of Blockchain in Healthcare"</li>
+                <li>"Liquid Biopsies and Emerging Diagnostic Techniques for Neuroblastoma"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+       
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container-xl">
+        <h2 id="projects-title" class="section-title"># Projects</h2>
+
+                <div id="projectCarousel" class="carousel slide project-carousel" data-bs-ride="false" data-bs-interval="false" aria-label="Projects">
+          <div class="carousel-inner">
+            <article class="carousel-item active project-slide">
+              <div class="project-media">
+                <img src="assets/images/projects/spam-classifier.jpg" width="1200" height="675" alt="Email and SMS Spam Classifier app showing a message marked as spam with a spam score of 100 percent">
+                <div class="project-overlay">
+                  <h3>Email and SMS Spam Classifier</h3>
+                  <a class="repo-link" href="https://github.com/Hafsa-Manal/spam-classifier-site" target="_blank" rel="noopener noreferrer" aria-label="View Email and SMS Spam Classifier repository on GitHub">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </a>
+                  <p>A machine learning web application that classifies an email or SMS as spam or not spam. It reports a spam score and an estimated spam type.</p>
+                  <ul class="tech-list" aria-label="Technologies used">
+                    <li>Python</li>
+                    <li>Google Colab</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item project-slide">
+              <div class="project-media">
+                <img src="assets/images/projects/stanley-community-website.jpg" width="1200" height="675" alt="Stanley community website opportunities page with a search box and category filters" loading="lazy">
+                <div class="project-overlay">
+                  <h3>Stanley Community Website</h3>
+                  <a class="repo-link" href="https://github.com/Hafsa-Manal/Stanley-Community-Website" target="_blank" rel="noopener noreferrer" aria-label="View Stanley Community Website repository on GitHub">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </a>
+                  <p>A college community mini project that supports communication, resource sharing and collaboration among students and faculty. It includes an opportunities page with search and category filters.</p>
+                  <ul class="tech-list" aria-label="Technologies used">
+                    <li>JavaScript</li>
+                    <li>CSS</li>
+                    <li>HTML</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item project-slide">
+              <div class="project-media">
+                <img src="assets/images/projects/murder-manor-cipher-game.jpg" width="1200" height="675" alt="Murder at the Manor game start screen with a taunting note from the killer and an Accept Case button" loading="lazy">
+                <div class="project-overlay">
+                  <h3>Murder at the Manor</h3>
+                  <a class="repo-link" href="https://github.com/Hafsa-Manal/Murder-Manor-Vigenere-Cipher-Game" target="_blank" rel="noopener noreferrer" aria-label="View Murder at the Manor repository on GitHub">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </a>
+                  <p>A cipher detective game. After a billionaire is found dead, the player decodes the killer's note with a Vigenère key to identify the location, the weapon and the killer's name.</p>
+                  <ul class="tech-list" aria-label="Technologies used">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-item project-slide">
+              <div class="project-media">
+                <img src="assets/images/projects/ai-attack-path-placeholder.jpg" width="1200" height="675" alt="Card reading AI Cyber Attack Path Analysis Platform, in progress" loading="lazy">
+                <div class="project-overlay">
+                  <h3>AI Cyber Attack Path Analysis Platform</h3>
+                  <a class="repo-link" href="https://github.com/Hafsa-Manal/AI-Cyber-Attack-Path-Analysis-Platform-" target="_blank" rel="noopener noreferrer" aria-label="View AI Cyber Attack Path Analysis Platform repository on GitHub">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </a>
+                  <p class="project-status">Ongoing major project</p>
+                  <p>Models an organisation's IT environment as a graph and uses AI agents to simulate attack stages, such as initial access, privilege escalation and lateral movement, inside a fully simulated environment.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            <span class="visually-hidden">Previous project</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            <span class="visually-hidden">Next project</span>
+          </button>
+        </div>
+
+        <div class="carousel-dots">
+          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
+          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
+          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
+          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="Project 4"></button>
+        </div>
+      </div>
+    </section>
+
+
+           <!-- RECOGNITION & CERTIFICATIONS -->
+    <section id="recognition" class="section" aria-labelledby="recognition-title">
+      <div class="container-xl">
+        <h2 id="recognition-title" class="section-title reveal"># Recognition &amp; Achievements</h2>
+        <div class="info-box entry-box reveal">
+          <div class="entry-row">
+            <h4>First Prize @ <span class="accent">IESA National Level Cybersecurity Competition</span></h4>
+            <p class="exp-meta">State level, technical research paper</p>
+          </div>
+          <div class="entry-row">
+            <h4>Published Article @ <span class="accent">EduVibe 2025</span></h4>
+            <p class="exp-meta">Yearly technical magazine, Department of CSE, Stanley College</p>
+            <ul class="arrow-list">
+              <li>
+                "Blockchain in Cybersecurity: A Game-Changer for Digital Safety."
+                <a href="assets/docs/eduvibe-2025.pdf#page=19" target="_blank" rel="noopener noreferrer">Read the article<span class="visually-hidden"> (PDF, opens in a new tab)</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </section>
+        
+        <section id="education" class="section" aria-labelledby="education-title">
+        <h2 id="certifications-title" class="section-title reveal"># Certifications</h2>
+        <div class="info-box entry-box reveal">
+          <div class="entry-row">
+            <h4>IoT Bootcamp @ <span class="accent">NIELIT</span></h4>
+            <p class="exp-meta">2025</p>
+            <ul class="arrow-list">
+              <li>Learned the fundamentals of the Internet of Things and device interfacing.</li>
+              <li>Built IoT mini-projects using Arduino and various sensors.</li>
+            </ul>
+          </div>
+          <div class="entry-row">
+            <h4>DevOps Workshop @ <span class="accent">Stanley College</span></h4>
+            <p class="exp-meta">18 and 19 April 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section" aria-labelledby="education-title">
+      <div class="container-xl">
+                <h2 id="education-title" class="section-title"># Education</h2>
+        <div class="info-box entry-box reveal">
+          <div class="entry-row">
+            <h4>B.E. Computer Science Engineering @ <span class="accent">Stanley College of Engineering and Technology for Women</span></h4>
+            <p class="exp-meta">Hyderabad, India</p>
+            <p class="entry-status">Pursuing, current CGPA 8.2 / 10</p>
+          </div>
+          <div class="entry-row">
+            <h4>High School Diploma (PCMB) @ <span class="accent">International Indian School, Riyadh (IISR)</span></h4>
+            <p class="exp-meta">Riyadh, Saudi Arabia</p>
+            <p class="entry-status">Graduated 2023, 73%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="section" aria-labelledby="hobbies-title">
+      <div class="container-xl">
+        <h2 id="hobbies-title" class="section-title"> # Creative</h2>
+        <p>
+          Outside of coursework and internships, I am also creative. I crochet, keep a junk
+          journal, and read and write in my free time.
+        </p>
+        <!-- TODO: this links to a stub page. Build out /hobbies.html with the crochet, journal and reading links, then update the href below. -->
+        
+                <ul class="contact-icons hobbies-icons">
+          <li>
+            <a class="icon-link has-tip" href="https://www.instagram.com/bellemaille_crochet" target="_blank" rel="noopener noreferrer" data-tip="Instagram">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="icon-link has-tip" href="https://pin.it/1Fm3xD1ew" target="_blank" rel="noopener noreferrer" data-tip="Pinterest">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 20c1-3 2-8 2-11a3 3 0 0 1 6 0c0 2-1 5-3 5"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="icon-link has-tip" href="https://www.fiverr.com/s/xrXRW1D" target="_blank" rel="noopener noreferrer" data-tip="Fiverr">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container-xl">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <p>
+              For questions, collaboration or research enquiries, please use the form or
+              contact me directly.
+            </p>
+            <ul class="contact-icons">
+              <li>
+                <a class="icon-link has-tip" href="mailto:lanamhafsa@gmail.com" data-tip="lanamhafsa@gmail.com" aria-label="Email lanamhafsa@gmail.com">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="icon-link has-tip" href="https://github.com/Hafsa-Manal" target="_blank" rel="noopener noreferrer" data-tip="GitHub" aria-label="GitHub profile">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="icon-link has-tip" href="https://www.linkedin.com/in/hafsa-manal-a74980291" target="_blank" rel="noopener noreferrer" data-tip="LinkedIn" aria-label="LinkedIn profile">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-7">
+            <form id="contactForm" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" autocomplete="name" required aria-describedby="nameError">
+                <div class="invalid-feedback" id="nameError"></div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" autocomplete="email" required aria-describedby="emailError">
+                <div class="invalid-feedback" id="emailError"></div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required aria-describedby="messageError"></textarea>
+                <div class="invalid-feedback" id="messageError"></div>
+              </div>
+              <button type="submit" class="btn btn-outline-accent">Send message</button>
+              <div id="formStatus" class="mt-3" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-xl">
+      <p>&copy; 2026 Hafsa Manal. Built with HTML, CSS, Bootstrap and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
